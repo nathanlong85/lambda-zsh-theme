@@ -27,10 +27,10 @@ function get_right_prompt() {
 # Change the prompt depending on the terminal application. The lambda on a
 # line by itself doesn't look right in Warp terminal
 if [[ "$TERM_PROGRAM" == "WarpTerminal" ]]; then
-  PROMPT=$'╭─%F{161%}%n%{$reset_color%} at %F{166%}%m%{$reset_color%} in %F{118%}%d%{$reset_color%} $(check_git_prompt_info)'
+  PROMPT=$'%F{161%}%n%{$reset_color%} at %F{166%}%m%{$reset_color%} in %F{118%}%d%{$reset_color%} $(check_git_prompt_info)'
 else
   PROMPT=$'╭─%F{161%}%n%{$reset_color%} at %F{166%}%m%{$reset_color%} in %F{118%}%d%{$reset_color%} $(check_git_prompt_info)
-  %{$reset_color%}╰─'$LAMBDA' %{$reset_color%}'
+%{$reset_color%}╰─'$LAMBDA' %{$reset_color%}'
 fi
 
 # RPROMPT='$(get_right_prompt)'
